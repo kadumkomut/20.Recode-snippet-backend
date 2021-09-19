@@ -6,6 +6,7 @@ require('./helpers/init_mongodb')
 // importing routes
 const snippetRoute = require('./routes/snippetRoute')
 const profileRoute = require('./routes/profileRoute')
+const searchRoute = require('./routes/searchRoute');
 
 // creating express 
 const app = express();
@@ -18,6 +19,7 @@ app.use(express.urlencoded({extended:true}))
 // using routes
 app.use('/profile',profileRoute)
 app.use('/snippet',snippetRoute)
+app.use('/search',searchRoute)
 
 
 // main route
