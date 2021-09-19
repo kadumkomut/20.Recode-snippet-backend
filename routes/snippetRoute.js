@@ -6,7 +6,7 @@ const SnippetModel = require('../models/snippetModel')
 router.get('/:id',async(req,res)=>{
     const id = req.params.id;
     try{
-        const myLists = await SnippetModel.find({userId : id});
+        const myLists = await SnippetModel.find({userId : id}).sort({ _id: -1 });
         res.send(myLists)
     }catch(err){
         res.status(500).send(err);
