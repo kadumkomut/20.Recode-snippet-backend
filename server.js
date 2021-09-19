@@ -11,7 +11,7 @@ const profileRoute = require('./routes/profileRoute')
 const app = express();
 
 // middle ware
-app.use(cors({origin:"*"}))
+app.use(cors({origin:'https://recode-snippet.web.app/'}))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
